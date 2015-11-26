@@ -203,12 +203,30 @@ void testQuickSort()
     cout << k << "th biggest: " << kthBiggest(a, SIZE, k) << endl;
 }
 
+void testBinarySearch()
+{
+    const int SIZE = 10;
+    int a[] = {2, 14, -1, -5, 7, 20, 8, 7, 11, 15};
+    
+    println(a, SIZE);
+    
+    quickSort(a, SIZE);
+    
+    println(a, SIZE);
+    
+    int element = 7;
+    int index = binarySearch(a, SIZE, element);
+    
+    cout << "Index of " << element << ": " << index << endl;
+}
+
 int main(int argc, const char * argv[]) {
     
 //    testDynamicArray();
 //    testStack();
 //    testCircularBuffer();
-    testQuickSort();
+//    testQuickSort();
+    testBinarySearch();
     
     return 0;
 }

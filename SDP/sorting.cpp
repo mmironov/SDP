@@ -119,3 +119,46 @@ int kthBiggest(int a[], int n, int k)
 {
     return kthBiggestHelper(a, k, 0, n-1);
 }
+
+int binarySearchHelper(int a[], int from, int to, int element)
+{
+    int mid = (from + to) / 2;
+    
+    if (a[mid] < element)
+    {
+        if (mid + 1 <= to)
+        {
+            return binarySearchHelper(a, mid+1, to, element);
+        }
+        else
+        {
+            return -(mid + 1);
+        }
+    }
+    
+    if (a[mid] > element)
+    {
+        if (from <= mid - 1)
+        {
+            return binarySearchHelper(a, from, mid-1, element);
+        }
+        else
+        {
+            return -mid;
+        }
+    }
+    
+    int index = mid;
+    
+    while (index > 0 && a[index] == element)
+    {
+        --index;
+    }
+    
+    return index + 1;
+}
+
+int binarySearch(int a[], int n, int element)
+{
+    return binarySearchHelper(a, 0, n-1, element);
+}
