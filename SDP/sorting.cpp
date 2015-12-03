@@ -162,3 +162,34 @@ int binarySearch(int a[], int n, int element)
 {
     return binarySearchHelper(a, 0, n-1, element);
 }
+
+void findAdditivesHelper(int a[], int from, int to, int sum,
+                  int& indX, int& indY)
+{
+    if (from >= to)
+    {
+        indX = -1;
+        indY = -1;
+        return;
+    }
+    
+    int x = a[from];
+    int y = sum - x;
+    int index = binarySearchHelper(a, from+1, to, y);
+    
+    if (index < 0)
+    {
+        findAdditivesHelper(a, from+1, to, sum, indX, indY);
+    }
+    else
+    {
+        indX = from;
+        indY = index;
+    }
+}
+
+void findAdditivesInSorted(int a[], int n, int sum,
+                   int& indX, int& indY)
+{
+    findAdditivesHelper(a, 0, n-1, sum, indX, indY);
+}

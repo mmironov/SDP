@@ -21,4 +21,7 @@ int kthBiggest(int a[], int n, int k);
 //inserted in a sorted sequence
 int binarySearch(int a[], int n, int element);
 
+void findAdditivesInSorted(int a[], int n, int sum,
+                  int& indX, int& indY);
+
 #endif /* sorting_h */

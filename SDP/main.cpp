@@ -220,13 +220,40 @@ void testBinarySearch()
     cout << "Index of " << element << ": " << index << endl;
 }
 
+void testFindAdditives()
+{
+    int numbers[] = {7, -1, 8, 3, 2, 5, 5, 1};
+    int numbersSize = 8;
+    
+    quickSort(numbers, numbersSize);
+    
+    int sum = 14;
+    int indX = 0;
+    int indY = 0;
+    findAdditivesInSorted(numbers, numbersSize, sum, indX, indY);
+    
+    if (indX > -1)
+    {
+        cout << sum << " = " << numbers[indX]
+        << " + " << numbers[indY] << endl;
+        
+        cout << "Indeces: " << indX << ", " << indY;
+        cout << endl;
+    }
+    else
+    {
+        cout << "No additives for " << sum << ".\n";
+    }
+}
+
 int main(int argc, const char * argv[]) {
     
 //    testDynamicArray();
 //    testStack();
 //    testCircularBuffer();
 //    testQuickSort();
-    testBinarySearch();
+//    testBinarySearch();
+    testFindAdditives();
     
     return 0;
 }
