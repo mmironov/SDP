@@ -269,7 +269,21 @@ class Hash : public HashFunction<const char*> {
 public:
     int hash(const char* value)
     {
-        return strlen(value);
+        int multiplier = 1;
+        int change = (int)strlen(value);
+        
+        int hashValue = 0;
+        
+        for(int i=0; i < strlen(value); ++i)
+        {
+            int toAdd = value[i];
+            toAdd = toAdd * i * multiplier;
+            hashValue += toAdd;
+            
+            multiplier += change;
+        }
+        
+        return hashValue;
     }
 };
 
@@ -284,11 +298,15 @@ void testMap()
     map.insert("Georgi", "55555");
     map.insert("Georgi", "222");
     map.remove("Georgi");
+    map.insert("Mariya", "123");
+    
+    cout << "Size: " << map.size() << endl;
     
     Pair<const char*, const char*>* found;
     found = map.find("Mariya");
     
-    if (found) {
+    if (found)
+    {
         cout << found->value << endl;
     }
     else

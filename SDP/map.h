@@ -17,16 +17,24 @@ template <typename K, typename V>
 class HashMap {
     static const int CAPACITY = 1024;
     
-    List< Pair<K, V> > map[CAPACITY];
+    List< Pair<K, V> > table[CAPACITY];
+    
+    int _size;
     
     HashFunction<K>* hashFunction;
 public:
+    
+    HashMap()
+    {
+        _size = 0;
+        hashFunction = 0;
+    }
     
     void insert(const K& key, const V& value)
     {
         int hash = hashFunction->hash(key) % CAPACITY;
         
-        List< Pair<K, V> >& pairs = map[hash];
+        List< Pair<K, V> >& pairs = table[hash];
         
         Pair<K, V>* pair = find(key);
         
@@ -36,6 +44,7 @@ public:
             newPair.key = key;
             newPair.value = value;
             pairs.add(newPair);
+            ++_size;
         }
         else
         {
@@ -47,13 +56,14 @@ public:
     {
         int hash = hashFunction->hash(key) % CAPACITY;
         
-        List< Pair<K, V> >& pairs = map[hash];
+        List< Pair<K, V> >& pairs = table[hash];
 
         for(int i=0; i < pairs.size(); ++i)
         {
             if (pairs.get(i).key == key)
             {
                 pairs.remove(i);
+                --_size;
                 break;
             }
         }
@@ -69,7 +79,7 @@ public:
     {
         int hash = hashFunction->hash(key) % CAPACITY;
         
-        List< Pair<K, V> >& pairs = map[hash];
+        List< Pair<K, V> >& pairs = table[hash];
         
         for(int i=0; i < pairs.size(); ++i)
         {
@@ -85,6 +95,11 @@ public:
     void setHashFunction(HashFunction<K>* function)
     {
         hashFunction = function;
+    }
+    
+    int size() const
+    {
+        return _size;
     }
 };
 
