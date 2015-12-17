@@ -283,9 +283,35 @@ public:
             multiplier += change;
         }
         
-        return hashValue;
+        return abs(hashValue);
     }
 };
+
+class IntHash : public HashFunction<int> {
+public:
+    int hash(int value)
+    {
+        return abs(value);
+    }
+};
+
+int countDifferent(int numbers[], int length)
+{
+    HashMap<int, int> map;
+    
+    HashFunction<int>* function = new IntHash;
+//
+    map.setHashFunction(function);
+    
+    for(int i=0; i < length; ++i)
+    {
+        map.insert(numbers[i], 0);
+    }
+    
+    delete function;
+    
+    return map.size();
+}
 
 void testMap()
 {
@@ -313,6 +339,11 @@ void testMap()
     {
         cout << "Key is not in the map\n";
     }
+    
+    int numbers[] = {2, 7, -1, 2, 3, 7, 2, 1};
+    
+    int different = countDifferent(numbers, 8);
+    cout << "Different: " << different << endl;
 }
 
 int main(int argc, const char * argv[]) {

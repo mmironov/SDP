@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDP/map.h"
-            timestampString = "472049210.257993"
+            timestampString = "472052531.696587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "insert(const K&amp; key, const V&amp; value)"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,13 +42,157 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SDP/map.h"
-            timestampString = "472049273.417705"
+            timestampString = "472052531.696587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "find(const K&amp; key)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDP/map.h"
+            timestampString = "472052720.342433"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "insert(const K&amp; key, const V&amp; value)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HashMap&lt;int, int&gt;::insert(int const&amp;, int const&amp;)"
+                  moduleName = "SDP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmiro/Documents/C++/SDP/SDP/map.h"
+                  timestampString = "472052809.264148"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "99">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HashMap&lt;char const*, char const*&gt;::insert(char const* const&amp;, char const* const&amp;)"
+                  moduleName = "SDP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmiro/Documents/C++/SDP/SDP/map.h"
+                  timestampString = "472052809.264697"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "101">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDP/map.h"
+            timestampString = "472052853.863476"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "insert(const K&amp; key, const V&amp; value)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HashMap&lt;int, int&gt;::insert(int const&amp;, int const&amp;)"
+                  moduleName = "SDP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmiro/Documents/C++/SDP/SDP/map.h"
+                  timestampString = "472052898.305004"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "73">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HashMap&lt;char const*, char const*&gt;::insert(char const* const&amp;, char const* const&amp;)"
+                  moduleName = "SDP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmiro/Documents/C++/SDP/SDP/map.h"
+                  timestampString = "472052898.305254"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "75">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SDP/map.h"
+            timestampString = "472052896.827535"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "find(const K&amp; key)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HashMap&lt;char const*, char const*&gt;::find(char const* const&amp;)"
+                  moduleName = "SDP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmiro/Documents/C++/SDP/SDP/map.h"
+                  timestampString = "472053004.755991"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "HashMap&lt;int, int&gt;::find(int const&amp;)"
+                  moduleName = "SDP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmiro/Documents/C++/SDP/SDP/map.h"
+                  timestampString = "472053004.756274"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

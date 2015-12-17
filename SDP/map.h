@@ -13,6 +13,15 @@
 #include "pair.h"
 #include "hash_function.h"
 
+template <typename T>
+class DefaultHash : public HashFunction<T> {
+public:
+    int hash(T value)
+    {
+        return 0;
+    }
+};
+
 template <typename K, typename V>
 class HashMap {
     static const int CAPACITY = 1024;
@@ -21,13 +30,24 @@ class HashMap {
     
     int _size;
     
+    bool defaultHashFunction;
+    
     HashFunction<K>* hashFunction;
 public:
     
     HashMap()
     {
         _size = 0;
-        hashFunction = 0;
+        defaultHashFunction = true;
+        hashFunction = new DefaultHash<K>;
+    }
+    
+    virtual ~HashMap()
+    {
+        if (defaultHashFunction)
+        {
+            delete hashFunction;
+        }
     }
     
     void insert(const K& key, const V& value)
@@ -95,6 +115,7 @@ public:
     void setHashFunction(HashFunction<K>* function)
     {
         hashFunction = function;
+        defaultHashFunction = false;
     }
     
     int size() const

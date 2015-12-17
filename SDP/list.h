@@ -29,7 +29,7 @@ public:
     
 //    List(const List<T>& other);
     
-    ~List()
+    virtual ~List()
     {
         Item<T>* p = start;
         
