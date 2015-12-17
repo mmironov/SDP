@@ -33,6 +33,10 @@
 		F449DA1D1BC669A300DED5E0 /* dynamic_array.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dynamic_array.h; sourceTree = "<group>"; };
 		F47B8C931BFB277600E06F34 /* sorting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sorting.cpp; sourceTree = "<group>"; };
 		F47B8C941BFB277600E06F34 /* sorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sorting.h; sourceTree = "<group>"; };
+		F4F5FFEE1C19A8F000B545E6 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		F4F5FFF11C19AE5E00B545E6 /* pair.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pair.h; sourceTree = "<group>"; };
+		F4F5FFF21C19AEA300B545E6 /* map.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = map.h; sourceTree = "<group>"; };
+		F4F5FFF31C19B3DC00B545E6 /* hash_function.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hash_function.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,10 @@
 				F436E4A01BEB921200FC7951 /* circular_buffer.h */,
 				F47B8C931BFB277600E06F34 /* sorting.cpp */,
 				F47B8C941BFB277600E06F34 /* sorting.h */,
+				F4F5FFEE1C19A8F000B545E6 /* list.h */,
+				F4F5FFF11C19AE5E00B545E6 /* pair.h */,
+				F4F5FFF21C19AEA300B545E6 /* map.h */,
+				F4F5FFF31C19B3DC00B545E6 /* hash_function.h */,
 			);
 			path = SDP;
 			sourceTree = "<group>";

@@ -11,6 +11,8 @@
 #include "stack.h"
 #include "circular_buffer.h"
 #include "sorting.h"
+#include "list.h"
+#include "map.h"
 using namespace std;
 
 template <typename T>
@@ -246,6 +248,55 @@ void testFindAdditives()
     }
 }
 
+void testList()
+{
+    List<int> l;
+    l.add(5);
+    l.add(20);
+    l.add(30);
+    
+    l.remove(1);
+    l.remove(0);
+    
+    for(int i=0; i < l.size(); ++i)
+    {
+        cout << l.get(i) << " ";
+    }
+    cout << endl;
+}
+
+class Hash : public HashFunction<const char*> {
+public:
+    int hash(const char* value)
+    {
+        return strlen(value);
+    }
+};
+
+void testMap()
+{
+    HashMap<const char*, const char*> map;
+    map.setHashFunction(new Hash());
+    
+    map.insert("Miroslav", "088");
+    map.insert("Nikolay", "3333");
+    map.insert("Mariya", "777");
+    map.insert("Georgi", "55555");
+    map.insert("Georgi", "222");
+    map.remove("Georgi");
+    
+    Pair<const char*, const char*>* found;
+    found = map.find("Mariya");
+    
+    if (found) {
+        cout << found->value << endl;
+    }
+    else
+    {
+        cout << "Key is not in the map\n";
+    }
+}
+
 int main(int argc, const char * argv[]) {
     
 //    testDynamicArray();
@@ -253,7 +304,9 @@ int main(int argc, const char * argv[]) {
 //    testCircularBuffer();
 //    testQuickSort();
 //    testBinarySearch();
-    testFindAdditives();
+//    testFindAdditives();
+//    testList();
+    testMap();
     
     return 0;
 }
