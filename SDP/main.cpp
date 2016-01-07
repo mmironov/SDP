@@ -13,6 +13,7 @@
 #include "sorting.h"
 #include "list.h"
 #include "map.h"
+#include "tree.h"
 using namespace std;
 
 template <typename T>
@@ -346,6 +347,23 @@ void testMap()
     cout << "Different: " << different << endl;
 }
 
+void testTrees() {
+    Tree<int> intTree;
+    
+    intTree.insert(5);
+    intTree.insert(10);
+    intTree.insert(15);
+    intTree.insert(7);
+    intTree.insert(1);
+    intTree.insert(5);
+    
+    intTree.remove(7);
+    intTree.remove(1);
+    
+    intTree.print();
+    cout << endl;
+}
+
 int main(int argc, const char * argv[]) {
     
 //    testDynamicArray();
@@ -355,7 +373,8 @@ int main(int argc, const char * argv[]) {
 //    testBinarySearch();
 //    testFindAdditives();
 //    testList();
-    testMap();
+//    testMap();
+    testTrees();
     
     return 0;
 }
